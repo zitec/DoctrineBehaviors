@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors;
+namespace Zitec\DoctrineBehaviors;
 
-use Knp\DoctrineBehaviors\Bundle\DependencyInjection\DoctrineBehaviorsExtension;
+use Zitec\DoctrineBehaviors\Bundle\DependencyInjection\DoctrineBehaviorsExtension;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

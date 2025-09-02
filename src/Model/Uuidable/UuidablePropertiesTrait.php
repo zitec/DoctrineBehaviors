@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Uuidable;
+namespace Zitec\DoctrineBehaviors\Model\Uuidable;
 
 use Ramsey\Uuid\UuidInterface;
 

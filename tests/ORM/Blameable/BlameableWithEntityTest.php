@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM\Blameable;
+namespace Zitec\DoctrineBehaviors\Tests\ORM\Blameable;
 
 use Doctrine\Persistence\ObjectRepository;
-use Knp\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Blameable\BlameableEntityWithUserEntity;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\UserEntity;
+use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Blameable\BlameableEntityWithUserEntity;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\UserEntity;
 
 final class BlameableWithEntityTest extends AbstractBehaviorTestCase
 {

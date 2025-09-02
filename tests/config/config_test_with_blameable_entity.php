@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Knp\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\UserEntity;
-use Knp\DoctrineBehaviors\Tests\Provider\EntityUserProvider;
+use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\UserEntity;
+use Zitec\DoctrineBehaviors\Tests\Provider\EntityUserProvider;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {

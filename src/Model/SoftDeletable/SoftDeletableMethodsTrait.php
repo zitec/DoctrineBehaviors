@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\SoftDeletable;
+namespace Zitec\DoctrineBehaviors\Model\SoftDeletable;
 
 use DateTime;
 use DateTimeInterface;
 use DateTimeZone;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
 
 trait SoftDeletableMethodsTrait
 {

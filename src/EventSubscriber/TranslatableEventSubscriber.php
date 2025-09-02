@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\EventSubscriber;
+namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
 use Doctrine\Bundle\DoctrineBundle\EventSubscriber\EventSubscriberInterface;
 use Doctrine\ORM\Event\LifecycleEventArgs;
@@ -10,9 +10,9 @@ use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Doctrine\Persistence\ObjectManager;
-use Knp\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
-use Knp\DoctrineBehaviors\Contract\Entity\TranslationInterface;
-use Knp\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
+use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
 use ReflectionClass;
 
 final class TranslatableEventSubscriber implements EventSubscriberInterface

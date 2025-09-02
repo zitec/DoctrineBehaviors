@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Translation;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Translation;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
-use Knp\DoctrineBehaviors\Contract\Entity\TranslationInterface;
-use Knp\DoctrineBehaviors\Model\Translatable\TranslationTrait;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableCustomizedEntity;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
+use Zitec\DoctrineBehaviors\Model\Translatable\TranslationTrait;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableCustomizedEntity;
 
 /**
  * Used to test translatable classes which declare a custom translation class.

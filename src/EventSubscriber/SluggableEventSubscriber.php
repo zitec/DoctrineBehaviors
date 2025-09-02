@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\EventSubscriber;
+namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
 use Doctrine\Bundle\DoctrineBundle\EventSubscriber\EventSubscriberInterface;
 use Doctrine\ORM\EntityManagerInterface;
@@ -10,8 +10,8 @@ use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
-use Knp\DoctrineBehaviors\Contract\Entity\SluggableInterface;
-use Knp\DoctrineBehaviors\Repository\DefaultSluggableRepository;
+use Zitec\DoctrineBehaviors\Contract\Entity\SluggableInterface;
+use Zitec\DoctrineBehaviors\Repository\DefaultSluggableRepository;
 
 final class SluggableEventSubscriber implements EventSubscriberInterface
 {

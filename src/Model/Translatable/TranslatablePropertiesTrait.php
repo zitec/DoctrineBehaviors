@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Translatable;
+namespace Zitec\DoctrineBehaviors\Model\Translatable;
 
 use Doctrine\Common\Collections\Collection;
-use Knp\DoctrineBehaviors\Contract\Entity\TranslationInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
 
 trait TranslatablePropertiesTrait
 {

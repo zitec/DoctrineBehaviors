@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity;
 
 use ArrayAccess;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
-use Knp\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
-use Knp\DoctrineBehaviors\Model\Tree\TreeNodeTrait;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Repository\TreeNodeRepository;
+use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
+use Zitec\DoctrineBehaviors\Model\Tree\TreeNodeTrait;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Repository\TreeNodeRepository;
 use Stringable;
 
 #[Entity(repositoryClass: TreeNodeRepository::class)]

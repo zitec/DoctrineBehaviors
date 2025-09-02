@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Translatable;
+namespace Zitec\DoctrineBehaviors\Model\Translatable;
 
 trait TranslatableTrait
 {

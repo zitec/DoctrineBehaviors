@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Translatable;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Translatable;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
 
 #[Entity]
 class ExtendedTranslatableEntityTranslation extends AbstractTranslatableEntityTranslation

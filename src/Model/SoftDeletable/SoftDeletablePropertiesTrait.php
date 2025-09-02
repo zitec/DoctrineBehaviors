@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\SoftDeletable;
+namespace Zitec\DoctrineBehaviors\Model\SoftDeletable;
 
 use DateTimeInterface;
 

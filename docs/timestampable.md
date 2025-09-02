@@ -10,8 +10,8 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Knp\DoctrineBehaviors\Contract\Entity\TimestampableInterface;
-use Knp\DoctrineBehaviors\Model\Timestampable\TimestampableTrait;
+use Zitec\DoctrineBehaviors\Contract\Entity\TimestampableInterface;
+use Zitec\DoctrineBehaviors\Model\Timestampable\TimestampableTrait;
 
 /**
  * @ORM\Entity
@@ -29,7 +29,7 @@ class Category implements TimestampableInterface
 
 use App\Entity\Category;   
 
-/** @var Knp\DoctrineBehaviors\Contract\Entity\TimestampableInterface $category */
+/** @var Zitec\DoctrineBehaviors\Contract\Entity\TimestampableInterface $category */
 $category = new Category();
 
 $entityManager->persist($category);

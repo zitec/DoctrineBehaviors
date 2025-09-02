@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Translatable;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Translatable;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\MappedSuperclass;
-use Knp\DoctrineBehaviors\Contract\Entity\TranslationInterface;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
-use Knp\DoctrineBehaviors\Model\Translatable\TranslationTrait;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Model\Translatable\TranslationTrait;
 
 #[MappedSuperclass]
 abstract class AbstractTranslatableEntityTranslation implements TranslationInterface

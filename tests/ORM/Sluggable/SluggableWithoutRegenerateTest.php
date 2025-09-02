@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM\Sluggable;
+namespace Zitec\DoctrineBehaviors\Tests\ORM\Sluggable;
 
 use Doctrine\Persistence\ObjectRepository;
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Sluggable\SluggableEntity;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Sluggable\SluggableWithoutRegenerateEntity;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Sluggable\SluggableEntity;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Sluggable\SluggableWithoutRegenerateEntity;
 
 final class SluggableWithoutRegenerateTest extends AbstractBehaviorTestCase
 {

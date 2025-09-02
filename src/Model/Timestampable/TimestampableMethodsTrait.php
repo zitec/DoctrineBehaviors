@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Timestampable;
+namespace Zitec\DoctrineBehaviors\Model\Timestampable;
 
 use DateTime;
 use DateTimeInterface;
 use DateTimeZone;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
 
 trait TimestampableMethodsTrait
 {

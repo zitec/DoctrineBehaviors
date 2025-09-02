@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Loggable;
+namespace Zitec\DoctrineBehaviors\Model\Loggable;
 
 use DateTime;
 

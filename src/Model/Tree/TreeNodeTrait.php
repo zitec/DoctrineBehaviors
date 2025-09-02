@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Tree;
+namespace Zitec\DoctrineBehaviors\Model\Tree;
 
 trait TreeNodeTrait
 {

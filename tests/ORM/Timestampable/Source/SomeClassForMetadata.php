@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM\Timestampable\Source;
+namespace Zitec\DoctrineBehaviors\Tests\ORM\Timestampable\Source;
 
 final class SomeClassForMetadata
 {

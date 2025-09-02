@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Uuidable;
+namespace Zitec\DoctrineBehaviors\Model\Uuidable;
 
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 

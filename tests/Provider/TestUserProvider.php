@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Provider;
+namespace Zitec\DoctrineBehaviors\Tests\Provider;
 
-use Knp\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
+use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
 
 final class TestUserProvider implements UserProviderInterface
 {

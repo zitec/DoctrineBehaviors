@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Provider;
+namespace Zitec\DoctrineBehaviors\Provider;
 
-use Knp\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
+use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;

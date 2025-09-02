@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\ORM\Tree;
+namespace Zitec\DoctrineBehaviors\ORM\Tree;
 
 use ArrayAccess;
 use Doctrine\ORM\QueryBuilder;
-use Knp\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
 
 trait TreeTrait
 {

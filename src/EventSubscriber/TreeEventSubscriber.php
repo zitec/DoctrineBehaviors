@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\EventSubscriber;
+namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
 use Doctrine\Bundle\DoctrineBundle\EventSubscriber\EventSubscriberInterface;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
-use Knp\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
 
 final class TreeEventSubscriber implements EventSubscriberInterface
 {

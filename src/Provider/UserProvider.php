@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Provider;
+namespace Zitec\DoctrineBehaviors\Provider;
 
-use Knp\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
+use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
 use Symfony\Component\Security\Core\Security;
 
 final class UserProvider implements UserProviderInterface

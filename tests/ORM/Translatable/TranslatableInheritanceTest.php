@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM\Translatable;
+namespace Zitec\DoctrineBehaviors\Tests\ORM\Translatable;
 
 use Doctrine\Persistence\ObjectRepository;
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Translatable\ExtendedTranslatableEntity;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Translatable\ExtendedTranslatableEntityTranslation;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Translatable\ExtendedTranslatableEntity;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Translatable\ExtendedTranslatableEntityTranslation;
 
 final class TranslatableInheritanceTest extends AbstractBehaviorTestCase
 {

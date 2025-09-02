@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests;
+namespace Zitec\DoctrineBehaviors\Tests;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Logging\DebugStack;
 use Doctrine\DBAL\Platforms\PostgreSQL94Platform;
 use Doctrine\ORM\EntityManagerInterface;
-use Knp\DoctrineBehaviors\Tests\HttpKernel\DoctrineBehaviorsKernel;
+use Zitec\DoctrineBehaviors\Tests\HttpKernel\DoctrineBehaviorsKernel;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

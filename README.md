@@ -1,6 +1,6 @@
 # Doctrine Behaviors
 
-[![Downloads](https://img.shields.io/packagist/dt/knplabs/doctrine-behaviors.svg?style=flat-square)](https://packagist.org/packages/knplabs/doctrine-behaviors)
+_This repository is a fork of [knplabs/doctrine-behaviors](https://github.com/KnpLabs/DoctrineBehaviors). The aim of this fork is to provide support for PHP 8.4 and later._
 
 This PHP library is a collection of traits and interfaces that add behaviors to Doctrine entities and repositories.
 
@@ -18,7 +18,7 @@ It currently handles:
 ## Install
 
 ```bash
-composer require knplabs/doctrine-behaviors
+composer require zitec/doctrine-behaviors
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ declare(strict_types=1);
 namespace App\Repository;
 
 use Doctrine\ORM\EntityRepository;
-use Knp\DoctrineBehaviors\ORM\Tree\TreeTrait;
+use Zitec\DoctrineBehaviors\ORM\Tree\TreeTrait;
 
 final class CategoryRepository extends EntityRepository
 {
@@ -61,7 +61,7 @@ Include `phpstan-extension.neon` in your project's PHPStan config:
 ```yaml
 # phpstan.neon
 includes:
-    - vendor/knplabs/doctrine-behaviors/phpstan-extension.neon
+    - vendor/zitec/doctrine-behaviors/phpstan-extension.neon
 ```
 
 ## 3 Steps to Contribute

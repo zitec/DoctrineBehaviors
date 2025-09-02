@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Timestampable;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Timestampable;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
-use Knp\DoctrineBehaviors\Contract\Entity\TimestampableInterface;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
-use Knp\DoctrineBehaviors\Model\Timestampable\TimestampableTrait;
+use Zitec\DoctrineBehaviors\Contract\Entity\TimestampableInterface;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Model\Timestampable\TimestampableTrait;
 
 #[Entity]
 class TimestampableEntity implements TimestampableInterface

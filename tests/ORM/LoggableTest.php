@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM;
+namespace Zitec\DoctrineBehaviors\Tests\ORM;
 
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\LoggableEntity;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\LoggableEntity;
 use Psr\Log\Test\TestLogger;
 
 final class LoggableTest extends AbstractBehaviorTestCase

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Contract\Translatable;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Contract\Translatable;
 
-use Knp\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
 
 interface ExtendedTranslatableInterface extends TranslatableInterface
 {

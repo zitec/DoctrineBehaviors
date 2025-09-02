@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity\SoftDeletable;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\SoftDeletable;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;

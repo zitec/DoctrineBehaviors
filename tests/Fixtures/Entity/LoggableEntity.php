@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity;
 
 use DateTimeInterface;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
-use Knp\DoctrineBehaviors\Contract\Entity\LoggableInterface;
-use Knp\DoctrineBehaviors\Model\Loggable\LoggableTrait;
+use Zitec\DoctrineBehaviors\Contract\Entity\LoggableInterface;
+use Zitec\DoctrineBehaviors\Model\Loggable\LoggableTrait;
 
 #[Entity]
 class LoggableEntity implements LoggableInterface

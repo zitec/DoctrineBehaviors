@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Contract\Translatable;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Contract\Translatable;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
-use Knp\DoctrineBehaviors\Model\Translatable\TranslatableTrait;
+use Zitec\DoctrineBehaviors\Model\Translatable\TranslatableTrait;
 
 #[Entity]
 class TranslatableEntityWithCustomInterface implements ExtendedTranslatableInterface

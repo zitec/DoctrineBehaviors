@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-use Knp\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
-use Knp\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
-use Knp\DoctrineBehaviors\EventSubscriber\LoggableEventSubscriber;
-use Knp\DoctrineBehaviors\Tests\DatabaseLoader;
-use Knp\DoctrineBehaviors\Tests\Provider\TestLocaleProvider;
-use Knp\DoctrineBehaviors\Tests\Provider\TestUserProvider;
+use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
+use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
+use Zitec\DoctrineBehaviors\EventSubscriber\LoggableEventSubscriber;
+use Zitec\DoctrineBehaviors\Tests\DatabaseLoader;
+use Zitec\DoctrineBehaviors\Tests\Provider\TestLocaleProvider;
+use Zitec\DoctrineBehaviors\Tests\Provider\TestUserProvider;
 use Psr\Log\Test\TestLogger;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\Security\Core\Security;
@@ -63,7 +63,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
                 [
                     'name' => 'DoctrineBehaviors',
                     'type' => 'attribute',
-                    'prefix' => 'Knp\DoctrineBehaviors\Tests\Fixtures\Entity\\',
+                    'prefix' => 'Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\\',
                     'dir' => __DIR__ . '/../../tests/Fixtures/Entity',
                     'is_bundle' => false,
                 ],

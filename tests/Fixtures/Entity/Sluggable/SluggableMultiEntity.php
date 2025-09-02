@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Sluggable;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Sluggable;
 
 use DateTime;
 use DateTimeInterface;
@@ -10,9 +10,9 @@ use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
-use Knp\DoctrineBehaviors\Contract\Entity\SluggableInterface;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
-use Knp\DoctrineBehaviors\Model\Sluggable\SluggableTrait;
+use Zitec\DoctrineBehaviors\Contract\Entity\SluggableInterface;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Model\Sluggable\SluggableTrait;
 
 #[Entity]
 class SluggableMultiEntity implements SluggableInterface

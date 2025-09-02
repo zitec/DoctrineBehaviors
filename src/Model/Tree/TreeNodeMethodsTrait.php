@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Tree;
+namespace Zitec\DoctrineBehaviors\Model\Tree;
 
 use Closure;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Knp\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
-use Knp\DoctrineBehaviors\Exception\TreeException;
+use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Exception\TreeException;
 use Nette\Utils\Json;
 
 trait TreeNodeMethodsTrait

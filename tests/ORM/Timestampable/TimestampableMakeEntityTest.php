@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM\Timestampable;
+namespace Zitec\DoctrineBehaviors\Tests\ORM\Timestampable;
 
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\ORM\Timestampable\Source\SomeClassForMetadata;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\ORM\Timestampable\Source\SomeClassForMetadata;
 
 /**
  * When console make:entity creates a new class, the event arguments are not fully populated

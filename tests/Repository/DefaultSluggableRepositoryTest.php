@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Repository;
+namespace Zitec\DoctrineBehaviors\Tests\Repository;
 
 use Doctrine\ORM\AbstractQuery;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\QueryBuilder;
-use Knp\DoctrineBehaviors\Contract\Entity\SluggableInterface;
-use Knp\DoctrineBehaviors\Repository\DefaultSluggableRepository;
+use Zitec\DoctrineBehaviors\Contract\Entity\SluggableInterface;
+use Zitec\DoctrineBehaviors\Repository\DefaultSluggableRepository;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 

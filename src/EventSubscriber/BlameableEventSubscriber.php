@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\EventSubscriber;
+namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
 use Doctrine\Bundle\DoctrineBundle\EventSubscriber\EventSubscriberInterface;
 use Doctrine\ORM\EntityManagerInterface;
@@ -11,8 +11,8 @@ use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Doctrine\ORM\UnitOfWork;
-use Knp\DoctrineBehaviors\Contract\Entity\BlameableInterface;
-use Knp\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\BlameableInterface;
+use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
 
 final class BlameableEventSubscriber implements EventSubscriberInterface
 {

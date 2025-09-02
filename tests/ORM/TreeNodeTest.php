@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM;
+namespace Zitec\DoctrineBehaviors\Tests\ORM;
 
 use Iterator;
-use Knp\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
-use Knp\DoctrineBehaviors\Exception\TreeException;
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\TreeNodeEntity;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Repository\TreeNodeRepository;
+use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
+use Zitec\DoctrineBehaviors\Exception\TreeException;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\TreeNodeEntity;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Repository\TreeNodeRepository;
 use Nette\Utils\Json;
 
 final class TreeNodeTest extends AbstractBehaviorTestCase

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Tree;
+namespace Zitec\DoctrineBehaviors\Model\Tree;
 
 use Doctrine\Common\Collections\Collection;
-use Knp\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
 
 trait TreeNodePropertiesTrait
 {

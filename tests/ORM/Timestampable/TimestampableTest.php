@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM\Timestampable;
+namespace Zitec\DoctrineBehaviors\Tests\ORM\Timestampable;
 
 use Datetime;
 use Doctrine\Persistence\ObjectRepository;
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Timestampable\TimestampableEntity;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Timestampable\TimestampableEntity;
 
 final class TimestampableTest extends AbstractBehaviorTestCase
 {

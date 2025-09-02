@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Timestampable;
+namespace Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Timestampable;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\AbstractTimestampableMappedSuperclassEntity;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\AbstractTimestampableMappedSuperclassEntity;
 
 #[Entity]
 class TimestampableInheritedEntity extends AbstractTimestampableMappedSuperclassEntity

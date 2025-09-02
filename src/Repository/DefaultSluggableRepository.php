@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Repository;
+namespace Zitec\DoctrineBehaviors\Repository;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Knp\DoctrineBehaviors\Contract\Entity\SluggableInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\SluggableInterface;
 
 final class DefaultSluggableRepository
 {

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM\Translatable;
+namespace Zitec\DoctrineBehaviors\Tests\ORM\Translatable;
 
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Doctrine\Persistence\ObjectRepository;
-use Knp\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
-use Knp\DoctrineBehaviors\Contract\Entity\TranslationInterface;
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Contract\Translatable\TranslatableEntityWithCustomInterface;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableCustomIdentifierEntity;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableCustomizedEntity;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableEntity;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableEntityTranslation;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\Translation\TranslatableCustomizedEntityTranslation;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Contract\Translatable\TranslatableEntityWithCustomInterface;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableCustomIdentifierEntity;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableCustomizedEntity;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableEntity;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\TranslatableEntityTranslation;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\Translation\TranslatableCustomizedEntityTranslation;
 
 final class TranslatableTest extends AbstractBehaviorTestCase
 {

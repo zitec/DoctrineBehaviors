@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Translatable;
+namespace Zitec\DoctrineBehaviors\Model\Translatable;
 
-use Knp\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
 
 trait TranslationPropertiesTrait
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\Provider;
+namespace Zitec\DoctrineBehaviors\Tests\Provider;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Knp\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
-use Knp\DoctrineBehaviors\Exception\ShouldNotHappenException;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\UserEntity;
+use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\UserEntity;
 
 final class EntityUserProvider implements UserProviderInterface
 {

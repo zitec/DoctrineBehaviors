@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Exception;
+namespace Zitec\DoctrineBehaviors\Exception;
 
 use Exception;
 

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Tests\ORM;
+namespace Zitec\DoctrineBehaviors\Tests\ORM;
 
 use DateTime;
 use Doctrine\Persistence\ObjectRepository;
-use Knp\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\SoftDeletable\SoftDeletableEntity;
-use Knp\DoctrineBehaviors\Tests\Fixtures\Entity\SoftDeletable\SoftDeletableEntityInherit;
+use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\SoftDeletable\SoftDeletableEntity;
+use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\SoftDeletable\SoftDeletableEntityInherit;
 
 final class SoftDeletableTest extends AbstractBehaviorTestCase
 {

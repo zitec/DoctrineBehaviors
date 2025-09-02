@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Sluggable;
+namespace Zitec\DoctrineBehaviors\Model\Sluggable;
 
-use Knp\DoctrineBehaviors\Exception\SluggableException;
+use Zitec\DoctrineBehaviors\Exception\SluggableException;
 use Symfony\Component\String\Slugger\AsciiSlugger;
 
 trait SluggableMethodsTrait

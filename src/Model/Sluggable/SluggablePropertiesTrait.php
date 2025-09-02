@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\DoctrineBehaviors\Model\Sluggable;
+namespace Zitec\DoctrineBehaviors\Model\Sluggable;
 
 trait SluggablePropertiesTrait
 {
