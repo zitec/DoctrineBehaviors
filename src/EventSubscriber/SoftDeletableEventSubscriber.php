@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Bundle\DoctrineBundle\EventSubscriber\EventSubscriberInterface;
+use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Event\OnFlushEventArgs;
 use Doctrine\ORM\Events;
 use Zitec\DoctrineBehaviors\Contract\Entity\SoftDeletableInterface;
 
-final class SoftDeletableEventSubscriber implements EventSubscriberInterface
+#[AsDoctrineListener(event: Events::onFlush)]
+#[AsDoctrineListener(event: Events::loadClassMetadata)]
+final class SoftDeletableEventSubscriber
 {
     /**
      * @var string
@@ -60,13 +62,5 @@ final class SoftDeletableEventSubscriber implements EventSubscriberInterface
             'type' => 'datetime',
             'nullable' => true,
         ]);
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getSubscribedEvents(): array
-    {
-        return [Events::onFlush, Events::loadClassMetadata];
     }
 }

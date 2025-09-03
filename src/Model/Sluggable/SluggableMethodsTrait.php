@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\Model\Sluggable;
 
-use Zitec\DoctrineBehaviors\Exception\SluggableException;
 use Symfony\Component\String\Slugger\AsciiSlugger;
+use Zitec\DoctrineBehaviors\Exception\SluggableException;
 
 trait SluggableMethodsTrait
 {

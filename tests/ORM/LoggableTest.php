@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\Tests\ORM;
 
+use Psr\Log\Test\TestLogger;
 use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
 use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\LoggableEntity;
-use Psr\Log\Test\TestLogger;
 
 final class LoggableTest extends AbstractBehaviorTestCase
 {

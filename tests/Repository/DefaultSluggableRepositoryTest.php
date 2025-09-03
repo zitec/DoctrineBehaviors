@@ -8,10 +8,10 @@ use Doctrine\ORM\AbstractQuery;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\QueryBuilder;
-use Zitec\DoctrineBehaviors\Contract\Entity\SluggableInterface;
-use Zitec\DoctrineBehaviors\Repository\DefaultSluggableRepository;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use Zitec\DoctrineBehaviors\Contract\Entity\SluggableInterface;
+use Zitec\DoctrineBehaviors\Repository\DefaultSluggableRepository;
 
 final class DefaultSluggableRepositoryTest extends TestCase
 {

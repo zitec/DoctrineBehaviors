@@ -7,10 +7,10 @@ namespace Zitec\DoctrineBehaviors\Model\Tree;
 use Closure;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Nette\Utils\Json;
 use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
 use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
 use Zitec\DoctrineBehaviors\Exception\TreeException;
-use Nette\Utils\Json;
 
 trait TreeNodeMethodsTrait
 {
@@ -197,7 +197,7 @@ trait TreeNodeMethodsTrait
     public function toArray(?Closure $prepare = null, ?array &$tree = null): array
     {
         if ($prepare === null) {
-            $prepare = static fn (TreeNodeInterface $node): string => (string) $node;
+            $prepare = static fn (TreeNodeInterface $treeNode): string => (string) $treeNode;
         }
 
         if ($tree === null) {
