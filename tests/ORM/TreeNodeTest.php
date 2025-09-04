@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Zitec\DoctrineBehaviors\Tests\ORM;
 
 use Iterator;
-use Nette\Utils\Json;
 use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
 use Zitec\DoctrineBehaviors\Exception\TreeException;
 use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
 use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\TreeNodeEntity;
 use Zitec\DoctrineBehaviors\Tests\Fixtures\Repository\TreeNodeRepository;
+use Nette\Utils\Json;
 
 final class TreeNodeTest extends AbstractBehaviorTestCase
 {

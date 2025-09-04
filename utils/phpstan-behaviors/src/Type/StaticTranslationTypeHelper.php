@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\PHPStan\Type;
 
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
+use Zitec\DoctrineBehaviors\PHPStan\Exception\PHPStanTypeException;
 use PhpParser\Node\Expr\MethodCall;
 use PHPStan\Analyser\Scope;
 use PHPStan\Reflection\ReflectionProvider;
 use ReflectionClass;
-use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
-use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
-use Zitec\DoctrineBehaviors\PHPStan\Exception\PHPStanTypeException;
 
 final class StaticTranslationTypeHelper
 {

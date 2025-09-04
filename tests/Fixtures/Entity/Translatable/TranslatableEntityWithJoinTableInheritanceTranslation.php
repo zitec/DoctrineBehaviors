@@ -16,7 +16,7 @@ use Zitec\DoctrineBehaviors\Model\Translatable\TranslationTrait;
 
 #[Entity]
 #[InheritanceType(value: 'JOINED')]
-#[DiscriminatorColumn(name: 'handle', type: 'string')]
+#[DiscriminatorColumn(name:'handle', type:'string')]
 class TranslatableEntityWithJoinTableInheritanceTranslation implements TranslationInterface
 {
     use TranslationTrait;

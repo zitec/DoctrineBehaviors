@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\Tests\ORM;
 
-use Ramsey\Uuid\UuidInterface;
 use Zitec\DoctrineBehaviors\Contract\Entity\UuidableInterface;
 use Zitec\DoctrineBehaviors\Tests\AbstractBehaviorTestCase;
 use Zitec\DoctrineBehaviors\Tests\Fixtures\Entity\UuidableEntity;
+use Ramsey\Uuid\UuidInterface;
 
 final class UuidableTest extends AbstractBehaviorTestCase
 {

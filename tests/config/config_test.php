@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-use Psr\Log\Test\TestLogger;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symfony\Component\Security\Core\Security;
 use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
 use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
 use Zitec\DoctrineBehaviors\EventSubscriber\LoggableEventSubscriber;
 use Zitec\DoctrineBehaviors\Tests\DatabaseLoader;
 use Zitec\DoctrineBehaviors\Tests\Provider\TestLocaleProvider;
 use Zitec\DoctrineBehaviors\Tests\Provider\TestUserProvider;
+use Psr\Log\Test\TestLogger;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symfony\Component\Security\Core\Security;
 use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 
 return static function (ContainerConfigurator $containerConfigurator): void {

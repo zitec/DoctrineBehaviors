@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Zitec\DoctrineBehaviors\PHPStan\Type;
 
 use Doctrine\Common\Collections\Collection;
+use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
 use PhpParser\Node\Expr\MethodCall;
 use PHPStan\Analyser\Scope;
 use PHPStan\Reflection\MethodReflection;
@@ -15,7 +16,6 @@ use PHPStan\Type\MixedType;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
 use PHPStan\Type\TypeCombinator;
-use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
 use function in_array;
 
 final class TranslatableGetTranslationsDynamicMethodReturnTypeExtension implements DynamicMethodReturnTypeExtension

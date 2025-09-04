@@ -8,9 +8,9 @@ use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Logging\DebugStack;
 use Doctrine\DBAL\Platforms\PostgreSQL94Platform;
 use Doctrine\ORM\EntityManagerInterface;
+use Zitec\DoctrineBehaviors\Tests\HttpKernel\DoctrineBehaviorsKernel;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Zitec\DoctrineBehaviors\Tests\HttpKernel\DoctrineBehaviorsKernel;
 
 abstract class AbstractBehaviorTestCase extends TestCase
 {

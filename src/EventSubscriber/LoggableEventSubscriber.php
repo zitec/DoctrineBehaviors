@@ -4,28 +4,23 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
-use Doctrine\ORM\Event\PostPersistEventArgs;
-use Doctrine\ORM\Event\PostUpdateEventArgs;
-use Doctrine\ORM\Event\PreRemoveEventArgs;
+use Doctrine\Bundle\DoctrineBundle\EventSubscriber\EventSubscriberInterface;
+use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Events;
+use Zitec\DoctrineBehaviors\Contract\Entity\LoggableInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
-use Zitec\DoctrineBehaviors\Contract\Entity\LoggableInterface;
 
-#[AsDoctrineListener(event: Events::postPersist)]
-#[AsDoctrineListener(event: Events::postUpdate)]
-#[AsDoctrineListener(event: Events::preRemove)]
-final class LoggableEventSubscriber
+final class LoggableEventSubscriber implements EventSubscriberInterface
 {
     public function __construct(
         private LoggerInterface $logger
     ) {
     }
 
-    public function postPersist(PostPersistEventArgs $postPersistEventArgs): void
+    public function postPersist(LifecycleEventArgs $lifecycleEventArgs): void
     {
-        $entity = $postPersistEventArgs->getObject();
+        $entity = $lifecycleEventArgs->getEntity();
         if (! $entity instanceof LoggableInterface) {
             return;
         }
@@ -33,22 +28,22 @@ final class LoggableEventSubscriber
         $createLogMessage = $entity->getCreateLogMessage();
         $this->logger->log(LogLevel::INFO, $createLogMessage);
 
-        $this->logChangeSet($postPersistEventArgs);
+        $this->logChangeSet($lifecycleEventArgs);
     }
 
-    public function postUpdate(PostUpdateEventArgs $postUpdateEventArgs): void
+    public function postUpdate(LifecycleEventArgs $lifecycleEventArgs): void
     {
-        $entity = $postUpdateEventArgs->getObject();
+        $entity = $lifecycleEventArgs->getEntity();
         if (! $entity instanceof LoggableInterface) {
             return;
         }
 
-        $this->logChangeSet($postUpdateEventArgs);
+        $this->logChangeSet($lifecycleEventArgs);
     }
 
-    public function preRemove(PreRemoveEventArgs $preRemoveEventArgs): void
+    public function preRemove(LifecycleEventArgs $lifecycleEventArgs): void
     {
-        $entity = $preRemoveEventArgs->getObject();
+        $entity = $lifecycleEventArgs->getEntity();
 
         if ($entity instanceof LoggableInterface) {
             $this->logger->log(LogLevel::INFO, $entity->getRemoveLogMessage());
@@ -56,13 +51,21 @@ final class LoggableEventSubscriber
     }
 
     /**
+     * @return string[]
+     */
+    public function getSubscribedEvents(): array
+    {
+        return [Events::postPersist, Events::postUpdate, Events::preRemove];
+    }
+
+    /**
      * Logs entity changeset
      */
-    private function logChangeSet(PostPersistEventArgs|PostUpdateEventArgs $lifecycleEventArgs): void
+    private function logChangeSet(LifecycleEventArgs $lifecycleEventArgs): void
     {
-        $entityManager = $lifecycleEventArgs->getObjectManager();
+        $entityManager = $lifecycleEventArgs->getEntityManager();
         $unitOfWork = $entityManager->getUnitOfWork();
-        $entity = $lifecycleEventArgs->getObject();
+        $entity = $lifecycleEventArgs->getEntity();
 
         $entityClass = $entity::class;
         $classMetadata = $entityManager->getClassMetadata($entityClass);

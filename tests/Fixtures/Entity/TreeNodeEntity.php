@@ -9,10 +9,10 @@ use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
-use Stringable;
 use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
 use Zitec\DoctrineBehaviors\Model\Tree\TreeNodeTrait;
 use Zitec\DoctrineBehaviors\Tests\Fixtures\Repository\TreeNodeRepository;
+use Stringable;
 
 #[Entity(repositoryClass: TreeNodeRepository::class)]
 class TreeNodeEntity implements TreeNodeInterface, ArrayAccess, Stringable

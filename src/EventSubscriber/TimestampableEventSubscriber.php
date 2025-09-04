@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
+use Doctrine\Bundle\DoctrineBundle\EventSubscriber\EventSubscriberInterface;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Zitec\DoctrineBehaviors\Contract\Entity\TimestampableInterface;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
-final class TimestampableEventSubscriber
+final class TimestampableEventSubscriber implements EventSubscriberInterface
 {
     public function __construct(
         private string $timestampableDateFieldType
@@ -45,5 +44,13 @@ final class TimestampableEventSubscriber
                 ]);
             }
         }
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getSubscribedEvents(): array
+    {
+        return [Events::loadClassMetadata];
     }
 }

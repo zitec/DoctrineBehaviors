@@ -22,8 +22,7 @@ class UuidableEntity implements UuidableInterface
     private int $id;
 
     public function __construct(
-        #[Column(type: 'string')]
-        private string $name
+        #[Column(type: 'string')] private string $name
     ) {
     }
 
