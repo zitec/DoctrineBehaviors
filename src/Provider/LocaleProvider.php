@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\Provider;
 
-use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
 
 final class LocaleProvider implements LocaleProviderInterface
 {

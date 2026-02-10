@@ -10,10 +10,10 @@ use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Doctrine\Persistence\ObjectManager;
+use ReflectionClass;
 use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
 use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
 use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
-use ReflectionClass;
 
 final class TranslatableEventSubscriber implements EventSubscriberInterface
 {

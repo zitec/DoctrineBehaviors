@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\Model\Uuidable;
 
-use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
+use Zitec\DoctrineBehaviors\Exception\ShouldNotHappenException;
 
 trait UuidableMethodsTrait
 {
