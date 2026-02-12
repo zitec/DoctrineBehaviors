@@ -10,7 +10,7 @@ use Doctrine\ORM\Event\OnFlushEventArgs;
 use Doctrine\ORM\Events;
 use Zitec\DoctrineBehaviors\Contract\Entity\SoftDeletableInterface;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
+#[AsDoctrineListener(event: Events::loadClassMetadata, priority: 100)]
 #[AsDoctrineListener(event: Events::onFlush)]
 final class SoftDeletableEventSubscriber
 {

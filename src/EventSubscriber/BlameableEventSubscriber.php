@@ -16,7 +16,7 @@ use Doctrine\ORM\UnitOfWork;
 use Zitec\DoctrineBehaviors\Contract\Entity\BlameableInterface;
 use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
+#[AsDoctrineListener(event: Events::loadClassMetadata, priority: 100)]
 #[AsDoctrineListener(event: Events::prePersist)]
 #[AsDoctrineListener(event: Events::preUpdate)]
 #[AsDoctrineListener(event: Events::preRemove)]

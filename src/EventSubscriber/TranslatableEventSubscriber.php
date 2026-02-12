@@ -16,7 +16,7 @@ use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
 use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
 use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
+#[AsDoctrineListener(event: Events::loadClassMetadata, priority: 100)]
 #[AsDoctrineListener(event: Events::postLoad)]
 #[AsDoctrineListener(event: Events::prePersist)]
 final class TranslatableEventSubscriber

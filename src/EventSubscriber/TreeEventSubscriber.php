@@ -9,7 +9,7 @@ use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
+#[AsDoctrineListener(event: Events::loadClassMetadata, priority: 100)]
 final class TreeEventSubscriber
 {
     public function loadClassMetadata(LoadClassMetadataEventArgs $loadClassMetadataEventArgs): void

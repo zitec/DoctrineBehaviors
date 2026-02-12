@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Zitec\DoctrineBehaviors\Contract\Entity\SluggableInterface;
 use Zitec\DoctrineBehaviors\Repository\DefaultSluggableRepository;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
+#[AsDoctrineListener(event: Events::loadClassMetadata, priority: 100)]
 #[AsDoctrineListener(event: Events::prePersist)]
 #[AsDoctrineListener(event: Events::preUpdate)]
 final class SluggableEventSubscriber
