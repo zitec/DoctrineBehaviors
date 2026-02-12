@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
+use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Event\PrePersistEventArgs;
@@ -14,10 +14,7 @@ use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Zitec\DoctrineBehaviors\Contract\Entity\SluggableInterface;
 use Zitec\DoctrineBehaviors\Repository\DefaultSluggableRepository;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
-#[AsDoctrineListener(event: Events::prePersist)]
-#[AsDoctrineListener(event: Events::preUpdate)]
-final class SluggableEventSubscriber
+final class SluggableEventSubscriber implements EventSubscriber
 {
     /**
      * @var string
@@ -28,6 +25,15 @@ final class SluggableEventSubscriber
         private EntityManagerInterface $entityManager,
         private DefaultSluggableRepository $defaultSluggableRepository
     ) {
+    }
+
+    public function getSubscribedEvents(): array
+    {
+        return [
+            Events::loadClassMetadata,
+            Events::prePersist,
+            Events::preUpdate,
+        ];
     }
 
     public function loadClassMetadata(LoadClassMetadataEventArgs $loadClassMetadataEventArgs): void

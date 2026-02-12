@@ -4,14 +4,20 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
+use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Zitec\DoctrineBehaviors\Contract\Entity\TreeNodeInterface;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
-final class TreeEventSubscriber
+final class TreeEventSubscriber implements EventSubscriber
 {
+    public function getSubscribedEvents(): array
+    {
+        return [
+            Events::loadClassMetadata,
+        ];
+    }
+
     public function loadClassMetadata(LoadClassMetadataEventArgs $loadClassMetadataEventArgs): void
     {
         $classMetadata = $loadClassMetadataEventArgs->getClassMetadata();

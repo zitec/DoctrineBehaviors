@@ -4,20 +4,26 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
+use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Event\OnFlushEventArgs;
 use Doctrine\ORM\Events;
 use Zitec\DoctrineBehaviors\Contract\Entity\SoftDeletableInterface;
 
-#[AsDoctrineListener(event: Events::loadClassMetadata)]
-#[AsDoctrineListener(event: Events::onFlush)]
-final class SoftDeletableEventSubscriber
+final class SoftDeletableEventSubscriber implements EventSubscriber
 {
     /**
      * @var string
      */
     private const DELETED_AT = 'deletedAt';
+
+    public function getSubscribedEvents(): array
+    {
+        return [
+            Events::loadClassMetadata,
+            Events::onFlush,
+        ];
+    }
 
     public function onFlush(OnFlushEventArgs $onFlushEventArgs): void
     {
