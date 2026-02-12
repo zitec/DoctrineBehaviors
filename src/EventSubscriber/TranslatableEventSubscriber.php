@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Common\EventSubscriber;
+use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Event\PostLoadEventArgs;
 use Doctrine\ORM\Event\PrePersistEventArgs;
@@ -16,7 +16,10 @@ use Zitec\DoctrineBehaviors\Contract\Entity\TranslatableInterface;
 use Zitec\DoctrineBehaviors\Contract\Entity\TranslationInterface;
 use Zitec\DoctrineBehaviors\Contract\Provider\LocaleProviderInterface;
 
-final class TranslatableEventSubscriber implements EventSubscriber
+#[AsDoctrineListener(event: Events::loadClassMetadata)]
+#[AsDoctrineListener(event: Events::postLoad)]
+#[AsDoctrineListener(event: Events::prePersist)]
+final class TranslatableEventSubscriber
 {
     /**
      * @var string
@@ -34,15 +37,6 @@ final class TranslatableEventSubscriber implements EventSubscriber
     ) {
         $this->translatableFetchMode = $this->convertFetchString($translatableFetchMode);
         $this->translationFetchMode = $this->convertFetchString($translationFetchMode);
-    }
-
-    public function getSubscribedEvents(): array
-    {
-        return [
-            Events::loadClassMetadata,
-            Events::postLoad,
-            Events::prePersist,
-        ];
     }
 
     /**

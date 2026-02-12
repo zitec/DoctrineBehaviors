@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Common\EventSubscriber;
+use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Event\PrePersistEventArgs;
@@ -16,7 +16,11 @@ use Doctrine\ORM\UnitOfWork;
 use Zitec\DoctrineBehaviors\Contract\Entity\BlameableInterface;
 use Zitec\DoctrineBehaviors\Contract\Provider\UserProviderInterface;
 
-final class BlameableEventSubscriber implements EventSubscriber
+#[AsDoctrineListener(event: Events::loadClassMetadata)]
+#[AsDoctrineListener(event: Events::prePersist)]
+#[AsDoctrineListener(event: Events::preUpdate)]
+#[AsDoctrineListener(event: Events::preRemove)]
+final class BlameableEventSubscriber
 {
     /**
      * @var string
@@ -38,16 +42,6 @@ final class BlameableEventSubscriber implements EventSubscriber
         private EntityManagerInterface $entityManager,
         private ?string $blameableUserEntity = null
     ) {
-    }
-
-    public function getSubscribedEvents(): array
-    {
-        return [
-            Events::loadClassMetadata,
-            Events::prePersist,
-            Events::preUpdate,
-            Events::preRemove,
-        ];
     }
 
     /**

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Zitec\DoctrineBehaviors\EventSubscriber;
 
-use Doctrine\Common\EventSubscriber;
+use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\ORM\Event\PostPersistEventArgs;
 use Doctrine\ORM\Event\PostUpdateEventArgs;
 use Doctrine\ORM\Event\PreRemoveEventArgs;
@@ -13,20 +13,14 @@ use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 use Zitec\DoctrineBehaviors\Contract\Entity\LoggableInterface;
 
-final class LoggableEventSubscriber implements EventSubscriber
+#[AsDoctrineListener(event: Events::postPersist)]
+#[AsDoctrineListener(event: Events::postUpdate)]
+#[AsDoctrineListener(event: Events::preRemove)]
+final class LoggableEventSubscriber
 {
     public function __construct(
         private LoggerInterface $logger
     ) {
-    }
-
-    public function getSubscribedEvents(): array
-    {
-        return [
-            Events::postPersist,
-            Events::postUpdate,
-            Events::preRemove,
-        ];
     }
 
     public function postPersist(PostPersistEventArgs $lifecycleEventArgs): void
